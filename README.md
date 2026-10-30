@@ -33,8 +33,8 @@ Ingestão das corridas de táxi de Nova York (TLC) de **janeiro a maio de 2023**
 
 A média fica perto de **1,4 passageiro** ao longo do dia, com um padrão claro:
 
-- **Madrugada (0h–3h): a maior média, 1,43–1,45**, com pico às 2h–3h — grupos voltando de bares, restaurantes e eventos;
-- **Início da manhã (5h–8h): a menor média, 1,26–1,29**, com mínimo às 6h — deslocamento para o trabalho, em geral sozinho;
+- **Madrugada (0h–3h): a maior média, 1,43–1,45**, com pico às 2h–3h
+- **Início da manhã (5h–8h): a menor média, 1,26–1,29**, com mínimo às 6h
 - **Ao longo do dia a média sobe gradualmente** (1,31 às 9h → 1,40 às 15h) e volta a 1,42–1,43 à noite (21h–23h).
 
 Gráfico em [`analysis/02_respostas`](analysis/02_respostas).
