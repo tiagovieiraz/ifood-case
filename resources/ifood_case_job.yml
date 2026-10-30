@@ -1,0 +1,38 @@
+resources:
+  jobs:
+    ifood_case_nyc_taxi:
+      name: ifood_case_nyc_taxi
+      tasks:
+        - task_key: setup
+          notebook_task:
+            notebook_path: /Workspace/Users/tiagozvieira@gmail.com/ifood-case/src/jobs/00_setup
+            source: WORKSPACE
+        - task_key: landing
+          depends_on:
+            - task_key: setup
+          notebook_task:
+            notebook_path: /Workspace/Users/tiagozvieira@gmail.com/ifood-case/src/jobs/01_landing
+            base_parameters:
+              overwrite: "false"
+            source: WORKSPACE
+        - task_key: bronze
+          depends_on:
+            - task_key: landing
+          notebook_task:
+            notebook_path: /Workspace/Users/tiagozvieira@gmail.com/ifood-case/src/jobs/02_bronze
+            source: WORKSPACE
+        - task_key: silver
+          depends_on:
+            - task_key: bronze
+          notebook_task:
+            notebook_path: /Workspace/Users/tiagozvieira@gmail.com/ifood-case/src/jobs/03_silver
+            source: WORKSPACE
+        - task_key: gold
+          depends_on:
+            - task_key: silver
+          notebook_task:
+            notebook_path: /Workspace/Users/tiagozvieira@gmail.com/ifood-case/src/jobs/04_gold
+            source: WORKSPACE
+      queue:
+        enabled: true
+      performance_target: PERFORMANCE_OPTIMIZED

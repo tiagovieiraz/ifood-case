@@ -1,0 +1,4 @@
+# No Databricks nada precisa ser instalado: PySpark e Delta Lake já vêm no runtime serverless.
+# Versões de referência para executar os módulos de src/nyc_taxi fora do Databricks:
+pyspark==3.5.3
+pandas>=2.0

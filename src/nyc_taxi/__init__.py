@@ -1,0 +1,1 @@
+"""Pipeline de ingestão das corridas de táxi de NY (TLC) — case iFood."""
